@@ -1,0 +1,111 @@
+
+
+#link:hover {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: cadetblue;
+  margin-top: 10px;
+}
+
+h1 {
+  font-style: italic;
+  font-family: Copperplate;
+}
+
+h3 {
+  font-family: "Courier New";
+}
+
+blockquote {
+  margin-bottom: 20px;
+  margin-top: 80px;
+  text-align: center;
+  font-size: x-large;
+  color: coral;
+  float: left; 
+}
+
+b {
+  font-size: 3rem;
+  color: crimson;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+table,
+tr,
+th,
+td {
+  border: 1px black solid;
+  text-align: center;
+  padding: 2px;
+  background-color: lightpink;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#bright-text,label{
+    font-weight: bold;
+    color: deeppink;
+    text-transform: uppercase;
+}
+
+a{
+  text-decoration: none;
+}
+p {
+  font-family: Courier New;
+  text-align: right;
+}
+
+header *{
+    display: inline;
+}
+
+.right-button{
+    float: right;
+    margin-top: 5px;
+    padding: 5px;
+    background-color:peachpuff;
+}
+
+.input-button{
+  padding: 7px;
+  background-color:peachpuff;
+  margin:10px;
+  font-weight: bold;
+  border:2px deeppink solid;
+}
+
+.left{
+    float: left;
+    margin-top: 0em;
+}
+
+footer, header{
+    background-color: pink;
+    padding: 8px;
+}
+
+footer{
+    height:2.5em;
+}
+
+div form{
+  border: 2px pink solid;
+  padding: 5px;
+  margin-bottom: 15px; 
+  background-color: whitesmoke;
+  
+}
+
+form p{
+  text-align: left ;
+}
+
+a.right-button{
+  border: 2px slategrey solid;
+}
+

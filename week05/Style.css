@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Knewave&family=Merienda+One&family=Noto+Serif:ital@1&display=swap");
+
+/*HEADER INFO*/
+header {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  width: 25%;
+}
+
+header h1 {
+  width: 75%;
+  font-size: 8rem;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons a {
+  display: block;
+  width: 100%;
+  margin: 5px 20px 15px 20px;
+  text-align: center;
+  padding: 15px;
+  border: 4px tomato solid;
+}
+
+a {
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.buttons a:hover {
+  border: 5px solid black;
+  background-color: coral;
+  color: black;
+}
+
+/*GRID CONTAINER*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+    "Text-1 Text-1 Text-1 Image-1 Image-1"
+    "Image-2 Image-2 Text-2 Text-2 Text-2"
+    "Image-3 Image-3 Image-3 Image-3 Image-3"
+    "Text-3 Text-3 Text-3 Text-3 Text-3"
+    "Text-4 Text-4 Text-4 Image-4 Image-4"
+    "Image-5 Image-5 Text-5 Text-5 Text-5";
+}
+.Text-1 {
+  grid-area: Text-1;
+}
+.Image-1 {
+  grid-area: Image-1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 90%;
+  background-image: url("images/Yoga1.jpg");
+  height: auto;
+  
+}
+.Image-2 {
+  grid-area: Image-2;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  background-image: url("images/Yoga2.jfif");
+  clip-path: circle(50% at 50% 50%);
+}
+.Text-2 {
+  grid-area: Text-2;
+  width: 90%;
+}
+.Image-3 {
+  grid-area: Image-3;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  background: url("images/Yoga3.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.Text-3 {
+  grid-area: Text-3;
+  width: 95%;
+}
+.Text-4 {
+  grid-area: Text-4;
+  width: 95%;
+}
+.Image-4 {
+  grid-area: Image-4;
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  width: 90%;
+  background-image: url("images/Yoga4.jpeg");
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+.Image-5 {
+  grid-area: Image-5;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  background-image: url("images/Yoga5.jpg");
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+.Text-5 {
+  grid-area: Text-5;
+  width: 95%;
+}
+
+/*FOOTER*/
+footer {
+  background-color: coral;
+  color: black;
+  display: flex;
+  margin-top: 10px;
+}
+
+footer p {
+  text-align: end;
+  float: right;
+  width: 60%;
+}
+
+footer a {
+  color: black;
+  float: left;
+  width: 40%;
+  padding-top: 25px;
+  padding-left: 10px;
+}
+
+footer a:hover{
+    font-style: italic;
+    color:white;
+    padding-left:20px; 
+}
+
+/*Fonts*/
+
+
+h1 {
+  font-family: "Noto Serif", serif;
+}
+p,
+h2,
+h3 {
+  font-family: "Noto Serif", serif;
+  padding-left: 8px;
+}
+
+h2,
+h1,
+h3,
+a {
+  color: coral;
+}
+
+p {
+  padding: 10px;
+  text-indent: 1cm;
+  overflow: hidden;
+}
+
+/*Media*/
+@media screen and (max-width: 700px) {
+  /*Header*/
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons a {
+    margin: 5px 0;
+    padding: 5px 0;
+  }
+  header h1 {
+    font-size: 4rem;
+  }
+
+  /* GRID */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "Image-1"
+      "Text-1"
+      "Image-2"
+      "Text-2"
+      "Image-3"
+      "Text-3"
+      "Image-4"
+      "Text-4"
+      "Image-5"
+      "Text-5";
+  }
+  .Image-1 {
+    grid-area: Image-1;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-image: url("images/Yoga1.jpg");
+    width: 100%;
+  }
+
+  .Text-1 {
+    grid-area: Text-1;
+  }
+
+  .Image-2 {
+    grid-area: Image-2;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: url("images/Yoga2.jfif");
+    clip-path: circle(50% at 50% 50%);
+  }
+  .Text-2 {
+    grid-area: Text-2;
+  }
+  .Image-3 {
+    grid-area: Image-3;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    background: url("images/Yoga3.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .Text-3 {
+    grid-area: Text-3;
+  }
+  .Image-4 {
+    grid-area: Image-4;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: url("images/Yoga4.jpeg");
+    clip-path: none;
+  }
+  .Text-4 {
+    grid-area: Text-4;
+  }
+  .Image-5 {
+    grid-area: Image-5;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-image: url("images/Yoga5.jpg");
+    clip-path: none;
+  }
+  .Text-5 {
+    grid-area: Text-5;
+  }
+
+  /* TEXT STYLE */
+  p {
+    overflow: auto;
+  }
+}

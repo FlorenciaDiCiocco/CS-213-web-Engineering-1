@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florencia Di Ciocco's mortage calculator</title>
+    <style>
+        table {
+            font-family: Verdana;
+            font-size: 14px;
+            border-collapse: collapse;
+            width: 600px;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            text-align: left;
+            margin: 0;
+        }
+
+        tbody tr:nth-child(2n) {
+            background-color: #eee;
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+
+    <script>
+        function myFunction() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var obj = JSON.parse(this.responseText);
+                    var table = "<tr><th>Filename</th><th>Type</th><th>CWD</th><th>Action</th></tr>";
+                    for (file of obj) {
+                        if (file.fileType == "dir") {
+                            table += "<tr><td>" + file.fileName + "</td><td>" + file.fileType + "</td><td>" + "" + "</td><td>" + "" + "</td></tr>";
+                        }
+                        else {
+                            table += "<tr><td>" + file.fileName + "</td><td>" + file.fileType + "</td><td>" + file.cwd + "</td><td>" + '<button  onclick = "window.location=&quot;' + file.fileName + '&quot;">click to display</button>' + "</td></tr>";
+                        }
+
+                    }
+                    document.getElementById("demo").innerHTML = table;
+                }
+            };
+            xmlhttp.open("GET", "assign10.php?q=", true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+
+<body onload="myFunction()">
+
+    <table id="demo"></table>
+
+
+</body>
+
+</html>

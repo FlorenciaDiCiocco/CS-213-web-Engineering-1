@@ -1,0 +1,157 @@
+/*general font style*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;1,200&display=swap");
+
+button,
+a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.25em;
+}
+
+/*NAVBAR*/
+.nav {
+  background-color: crimson;
+  padding: 15px;
+  text-align: right;
+  margin-top: -10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 0%;
+}
+
+nav {
+  text-align: right;
+  background-color: black;
+  color: white;
+}
+
+nav a {
+  color: white;
+  font-size: x-large;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*********************FORM********************/
+
+nav {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+#second{
+  border: 2px solid red;
+  padding: 4px;
+  margin-bottom: 5px;
+}
+
+/* Full-width input fields */
+input[type="text"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+label {
+  padding-left: 5px;
+}
+
+.warning {
+  color: red;
+  font-size: small;
+  margin-top: -10px;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+input {
+  margin-bottom: -10px;
+  padding-bottom: 0;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  border: 2px black solid;
+  padding: 10px;
+  margin: 5px;
+}
+
+img{
+  width: 100px;
+  height: auto;
+  padding: 10px;
+  display: block;
+}
+
+select{
+
+  margin: 15px ;
+}
+
+
+table {
+  border-spacing: 0.5rem;
+}
+td {
+  padding: 0.5rem;
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+}
+
+td:nth-child(1) { background: hsl(150, 50%, 50%); }
+td:nth-child(2) { background: hsl(160, 60%, 50%); }
+td:nth-child(3) { background: hsl(170, 70%, 50%); }
+td:nth-child(4) { background: hsl(180, 80%, 50%); }
+td:nth-child(5) { background: hsl(190, 90%, 50%); }
+td:nth-child(6) { background: hsl(200, 99%, 50%); }
+td:nth-child(7) { background: hsl(150, 50%, 50%); }
+td:nth-child(8) { background: hsl(160, 60%, 50%); }
+td:nth-child(9) { background: hsl(170, 70%, 50%); }
+td:nth-child(10) { background: hsl(180, 80%, 50%); }
+td:nth-child(11) { background: hsl(190, 90%, 50%); }
+td:nth-child(12) { background: hsl(200, 99%, 50%); }

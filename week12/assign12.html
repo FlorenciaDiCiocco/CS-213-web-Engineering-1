@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Florencia Di Ciocco's selling point</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="java.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  <nav>
+    <a href="../index.html">Index</a>
+  </nav>
+
+  <div class="grid-container">
+    <div class="_orange">
+      <form>
+
+        <label for="startCity"><b>Start City</b></label>
+        <input type="text" placeholder="Start City" name="startCity" id="startCity" onchange="validatestartCity();"
+          onblur="validatestartCity()">
+        <p id="startCity_warning" class="warning"></p>
+
+        <label for="startState"><b>Start State</b></label>
+        <input type="text" placeholder="Start State" name="startState" id="startState" onchange="validatestartState();"
+          onblur="validatestartState()">
+        <p id="startState_warning" class="warning"></p>
+
+        <label for="endCity"><b>End City</b></label>
+        <input type="text" placeholder="End City" name="endCity" id="endCity" onchange="validateendCity();"
+          onblur="validateendCity()">
+        <p id="endCity_warning" class="warning"></p>
+
+        <label for="endState"><b>End State</b></label>
+        <input type="text" placeholder="End State" name="endState" id="endState" onchange="validateendState();"
+          onblur="validateendState()">
+        <p id="endState_warning" class="warning"></p>
+
+        <button type="button" class="registerbtn" id="Calculate" onclick="checkAndCall()">Calculate</button>
+
+        <button type="reset" class="registerbtn" id="clear" onclick="clearing()">Reset</button>
+      </form>
+    </div>
+    <div class="_green">
+      <form>
+        <label for="miles"><b>Miles</b></label>
+        <input type="text" placeholder="We will display the miles here" name="miles" id="miles" disabled>
+
+        <label for="tmode"><b>Transportation mode</b></label>
+        <textarea rows="4" cols="50" placeholder="If available, we will display the transportation mode here"
+          name="tmode" id="tmode" disabled></textarea>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+/*general font style*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;1,200&display=swap");
+
+label, option {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.25em;
+}
+
+/*NAVBAR*/
+nav {
+  text-align: right;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: large;
+}
+
+nav a {
+  color: white;
+  font-size: x-large;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: normal;
+}
+
+form{
+  margin: 10px;
+}
+
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+
+table{
+  margin-top: 20px;
+}

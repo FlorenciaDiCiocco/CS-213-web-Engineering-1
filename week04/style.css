@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: 150px 50px 200px 200px 50px;
+  gap: 0px 0px;
+}
+
+.Header {
+  grid-area: 1 / 1 / 2 / 4;
+  background-color: lightslategray;
+}
+
+.Header img{
+  
+   margin: 35px;
+   float: left;
+   z-index: 1;
+   position: absolute;
+   max-width:100%;
+   max-height:20%;
+
+}
+.Header h1{
+    font-size:4em;
+    font-family: 'Carter One', cursive;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.Button a{
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+    padding: 5px;
+    border:5px black solid;
+    margin: 10px;
+}
+
+.Button a:hover{
+    color: white;
+    background-color: black;    
+    font-family: 'Carter One', cursive;
+    margin-top: 5px;
+}
+.Button {
+  grid-area: 2 / 1 / 3 / 4;
+  background-color: lightslategray;
+  text-align: right;
+  z-index: 0;
+  position: relative;
+  border-bottom: 2px black solid;
+}
+
+
+
+.Add-1 {
+  grid-area: 3 / 3 / 4 / 4;
+  background-color: lightslategray;
+  padding: 10px;
+  
+}
+
+.Add-1 img, .Add-2 img{
+    width: 100%;
+    height: 90%;
+}
+
+.Add-1 img:hover, .Add-2 img:hover{
+    border: 3px black solid;
+    box-shadow: 2px 5px;
+
+}
+
+.Add-1 a:hover, .Add-2 a:hover{
+    
+    text-transform: uppercase;
+    
+    font-weight: bold;
+}
+
+.Add-1 a, .Add-2 a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.Add-2 {
+  grid-area: 4 / 3 / 5 / 4;
+  background-color: lightslategray;
+  padding: 10px;
+}
+
+.Content {
+  background-color: white;
+  grid-area: 3 / 1 / 5 / 3;
+  
+}
+
+.zone-1 {
+  grid-area: 3 / 1 / 4 / 2;
+  margin: 3px;
+}
+
+.Zone-2 {
+  grid-area: 3 / 2 / 4 / 3;
+  margin: 3px;
+  
+}
+
+#one{
+      background-image: url("images/adidas_running.jpg");
+      background-repeat: round;
+  }
+
+#Picture-zone-4{
+    background-image: url("images/excersice2.jpg");
+    background-repeat: round;
+
+}
+
+#Picture-zone-1{
+    background-image: url("images/excersice.jpg");
+    background-repeat: round;
+}
+
+.Zone-3 {
+  grid-area: 4 / 1 / 5 / 2;
+  margin: 3px;
+}
+
+.Zone-4 {
+  grid-area: 4 / 2 / 5 / 3;
+  margin: 3px;
+}
+
+.Footer {
+    grid-area: 5 / 1 / 6 / 4;
+    background-color: lightslategray;
+    border-top: 2px black solid;
+    display: inline;
+}
+
+.Footer p{
+    float: right;
+    padding-right: 10px;
+    font-size: larger;
+    color: white;
+
+  }
+.Footer img{
+    margin: 5px;
+    max-height: 80%;
+}

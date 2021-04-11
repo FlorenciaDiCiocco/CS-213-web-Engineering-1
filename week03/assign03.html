@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Florencia Di Ciocco's w3 Assignment </title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      width: 900px;
+      border: 2px teal solid;
+      padding: 10px;
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    #link {
+      border: 2px black solid;
+      padding: 4px;
+      background-color: rgb(229, 171, 235);
+      margin-top: 20px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <h1>Welcome to Florencia Di Ciocco's W3 Assignment</h1>
+    
+    <form style="display: inline" action="#bottom" method="get">
+      <button class="right-button">Go to Bottom</button>
+    </form>
+  </header>
+  <div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nobis, quia et repudiandae pariatur quibusdam
+      in aliquam, vel tempore beatae sint esse, quam <strong>distinctio</strong>! Quos optio assumenda quas eos
+      nobis!Deserunt molestiae quam numquam nostrum laudantium, quas sed repudiandae quos voluptates id illo! Minima
+      ullam officia<em id="bright-text"> maiores voluptatum quis laboriosam </em>recusandae quidem rem asperiores
+      voluptate, pariatur perferendis eveniet, debitis repellat.</p>
+  </div>
+  <div>
+    <h3 class="right">My name is Florencia Di Ciocco, my major is is Applied
+      Technology.
+    </h3>
+    <h4 class="right" >I'm from Buenos Aires, Argentina.</h4>
+    <div>
+      <blockquote><b>&#8216;&#8216;</b>Don't stop when you are
+        <strong>TIRED</strong>,<br>stop when you're <strong>DONE</strong>.<b>&#8217;&#8217;</b>
+      </blockquote>
+      <img src="effort.jpg" alt="Image of effort" style="width: 40%;height: 40%;margin-right: 0;opacity: 70%;">
+    </div>
+    <div>
+      <table>
+        <tr>
+          <th>Course #</th>
+          <th>Course Description</th>
+          <th>Sec #</th>
+          <th>Class Time</th>
+          <th>Class Location</th>
+          <th>Syllabus</th>
+        </tr>
+        <tr>
+          <td>CS246</td>
+          <td>Software design and development</td>
+          <td>03</td>
+          <td>N/A</td>
+          <td>Online</td>
+          <td><a href="https://content.byui.edu/file/44e61fc5-ba7b-45a3-8aa8-1b41abd66774/2/cs246syllabus.html"
+              target="_blank">Link</a></td>
+        </tr>
+        <tr>
+          <td>CS213</td>
+          <td>Web Engineering 1</td>
+          <td>02</td>
+          <td>N/A</td>
+          <td>Online</td>
+          <td><a
+              href="https://content.byui.edu/file/0a9e96c0-2cee-46ec-aecd-526cd1ce7ac3/3/CS%20213%20-%20Syllabus.html"
+              target="_blank">Link</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div>
+    <form>
+      <label for="fname">Full name:</label><br>
+      <input type="text" id="fname" name="fname" placeholder="Full Name:"><br>
+      <label for="message">Last name:</label><br>
+      <textarea id="message" name="message" rows="5" placeholder="Message:"></textarea><br>
+      <p>Which of these classes are you attending?</p>
+      <input type="checkbox" id="CS213" name="CS213" value="CS213">
+      <label> CS213</label><br>
+      <input type="checkbox" id="CS246" name="CS246" value="CS246">
+      <label > CS246</label><br>
+      <input type="checkbox" id="Neither" name="Neither" value="Neither">
+      <label >Neither</label><br><br>
+      <p>Please indicate your gender</p>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label><br><br>
+      <label for="feeling">Did you enjoy the page? </label>
+      <select name="feeling" id="feeling">
+        <option disabled selected value> -- select an option -- </option>
+        <option value="Yes">Yes</option>
+        <option value="Totally">Totally</option>
+        <option value="No">No</option>
+        <option value="better">Could've been better</option>
+      </select><br>
+      <input class="input-button" type="submit" value="Submit">
+      <input class="input-button" type="reset" value="Reset">
+    </form>
+  </div>
+  <footer id="bottom">
+    <a class="right-button left" href="../index.html" target="_top"><img src="home2.png" alt="" width="30" height="25"></a>
+    
+    <form style="display: inline" action="#header" method="get">
+      <button class="right-button">Go to Top</button>
+    </form>
+  </footer>
+</body>
+
+</html>

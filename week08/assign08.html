@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Florencia Di Ciocco's selling point</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="java.js"></script>
+
+</head>
+
+<body>
+  <nav>
+    <a href="../index.html">Index</a>
+  </nav>
+
+  <!-- FORM -->
+  <form id="myForm" onreset="clearing()">
+    <div class="container">
+      <h1>Buy a bag</h1>
+      <p>Please fill in this form.</p>
+      <hr>
+
+      <label for="FN"><b>First Name</b></label>
+      <input type="text" placeholder="First Name" name="FN" id="FN" onchange="validateName();" onblur="validateName()">
+      <p id="FN_warning" class="warning"></p>
+
+      <label for="LN"><b>Last Name</b></label>
+      <input type="text" placeholder="Last Name" name="LN" id="LN"  onchange="validateLastName();" onblur="validateLastName()">
+      <p id="LN_warning" class="warning"></p>
+
+      <label for="Adress"><b>Adress</b></label>
+      <textarea placeholder="Street address, city, state, and zip" name="Adress" id="Adress" rows="4" cols="50"  onchange="validateAdress();" onblur="validateAdress()"></textarea>
+      <p id="Adress_warning" class="warning"></p>
+
+      <label for="Phone"><b>Phone</b></label>
+      <input type="text" placeholder="Phone" name="Phone" id="Phone" onchange="validatePhone()" onblur="validatePhone()">
+      <p id="phone_warning" class="warning"></p>
+
+      <div class="images">
+        <div class="one">
+          <img src="images/1.jpg" alt="tree colors bag">
+          <input type="checkbox" id="item_0" name="item_0" value="item_0" onchange="total()" onblur="total()">
+          <label for="item_0">First product, price 1$</label><br>
+        </div>
+        <div class="two">
+          <img src="images/2.jpg" alt="tree colors bag">
+          <input type="checkbox" id="item_1" name="item_1" value="item_1"  onchange="total()" onblur="total()">
+          <label for="item_1">Second product, price 2$</label><br>
+        </div>
+        <div class="three">
+          <img src="images/3.jpg" alt="tree colors bag">
+          <input type="checkbox" id="item_2" name="item_2" value="item_2"  onchange="total()" onblur="total()">
+          <label for="item_2">Third product, price 3$</label><br>
+        </div>
+        <div class="four">
+          <img src="images/4.jpg" alt="tree colors bag">
+          <label for="item_3">Third product, price 4$. Quantity (between 1 and 5):</label>
+          <input type="number" id="item_3" name="item_3" min="1" max="5" value="0"  onchange="total()" onblur="total()">
+        </div>
+      </div>
+
+      <label for="Total"><b>Total</b></label>
+      <input type="text" name="Total" id="Total" disabled>
+      <p id="total_warning" class="warning"></p>
+
+      <p><b>Credit Card Type</b></p>
+      <input type="radio" id="Visa" name="card" value="Visa" onchange="validateType();" onblur="validateType()">
+      <label for="Visa">Visa</label><br>
+      <input type="radio" id="Mastercard" name="card" value="Mastercard" onchange="validateType();" onblur="validateType()">
+      <label for="Mastercard">Mastercard</label><br>
+      <input type="radio" id="AE" name="card" value="AE" onchange="validateType();" onblur="validateType()">
+      <label for="AE">American express</label><br><br>
+      <p id="type_warning" class="warning"></p>
+
+      <label for="credit_card"><b>Credit Card Number</b></label>
+      <input type="text" placeholder="Credit Card Number, format: 1111 1111 1111 1111" name="credit_card" id="credit_card" onchange="validatecredit_card()"
+        onblur="validatecredit_card()">
+      <p id="credit_card_warning" class="warning"></p>
+
+      <label for="exp_date"><b>Credit Card Expiration Date</b></label>
+      <input type="text" placeholder="Credit Card Expiration Date" name="exp_date" id="exp_date" onchange="validateDate()"
+        onblur="validateDate()">
+      <p id="exp_date_warning" class="warning"></p>
+
+      <button type="button" class="registerbtn" onclick="Submiting()" id="Submit">Submit</button>
+
+      <button type="reset" class="registerbtn" id="clear" >Reset</button>
+    </div>
+
+
+  </form>
+
+
+</body>
+
+</html>

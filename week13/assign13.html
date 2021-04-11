@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registering sheets</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="java.js"></script>
+
+</head>
+
+<body onload="firstload(null)">
+  <nav>
+    <a href="../index.html">Index</a>
+  </nav>
+
+  <!-- FORM -->
+  <form id="myForm">
+    <div class="container">
+      <h1>Register Piano Students</h1>
+      <p>Please fill in this form.</p>
+      <hr>
+
+      <label for="performance"><b>Performance Type:</b></label>
+      <select name="performance" id="performance" onclick="validatePerformance()" onblur="validatePerformance()"
+        onchange="validatePerformance()">
+        <option value="choose" disabled="disabled" selected="true">Choose one</option>
+        <option value="solo">solo</option>
+        <option value="duet">duet</option>
+        <option value="concerto">concerto</option>
+      </select>
+      <p id="performance_warning" class="warning"></p>
+      <br>
+
+      <label for="first_name"><b>First Name</b></label>
+      <input type="text" placeholder="First Name" name="first_name" id="first_name" onchange="validateName();"
+        onblur="validateName()">
+      <p id="FN_warning" class="warning"></p>
+
+      <label for="last_name"><b>Last Name</b></label>
+      <input type="text" placeholder="Last Name" name="last_name" id="last_name" onchange="validateLastName();"
+        onblur="validateLastName()">
+      <p id="LN_warning" class="warning"></p>
+
+      <label for="student_id"><b>Student ID</b></label>
+      <input type="text" placeholder="Student ID" name="student_id" id="student_id" onchange="validateStudentID()"
+        onblur="validateStudentID()">
+      <p id="StudentID_warning" class="warning"></p>
+
+      <div id="second" style="display: none;">
+        <p>Second student info:</p>
+
+        <label for="first_name_2"><b>First Name</b></label>
+        <input type="text" placeholder="First Name" name="first_name_2" id="first_name_2" onchange="validateName2();"
+          onblur="validateName2()">
+        <p id="FN_warning2" class="warning"></p>
+
+        <label for="last_name_2"><b>Last Name</b></label>
+        <input type="text" placeholder="Last Name" name="last_name_2" id="last_name_2" onchange="validateLastName2();"
+          onblur="validateLastName2()">
+        <p id="LN_warning2" class="warning"></p>
+
+        <label for="student_id_2"><b>Student ID</b></label>
+        <input type="text" placeholder="Student ID" name="student_id_2" id="student_id_2"
+          onchange="validateStudentID2()" onblur="validateStudentID2()">
+        <p id="StudentID_warning2" class="warning"></p>
+      </div>
+
+      <label for="skill"><b>Skill level</b></label>
+      <select name="skill" id="skill" onchange="validateSkill()" onblur="validateSkill()">
+        <option value="choose" disabled="disabled" selected="true">Choose one</option>
+        <option value="beginner">beginner</option>
+        <option value="intermediate">intermediate</option>
+        <option value="pre-advanced">pre-advanced</option>
+        <option value="advanced">advanced</option>
+      </select>
+      <p id="skill_warning" class="warning"></p>
+      <br>
+
+      <div id="instrument">
+        <label for="instrument">Choose any and all instruments:</label>
+        <br>
+        <input type="checkbox" id="piano" name="piano" value="piano" onblur="validateInstrument()"
+          onchange="validateInstrument()">
+        <label for="piano">piano</label>
+        <input type="checkbox" id="voice" name="voice" value="voice" onblur="validateInstrument()"
+          onchange="validateInstrument()">
+        <label for="voice">voice</label>
+        <input type="checkbox" id="string" name="string" value="string" onblur="validateInstrument()"
+          onchange="validateInstrument()">
+        <label for="string">string</label>
+        <input type="checkbox" id="organ" name="organ" value="organ" onblur="validateInstrument()"
+          onchange="validateInstrument()">
+        <label for="organ">organ</label>
+        <input type="checkbox" id="other" name="other" value="other" onblur="validateInstrument()"
+          onchange="validateInstrument()">
+        <label for="other">other</label>
+      </div>
+      <br>
+      <p id="instrument_warning" class="warning"></p>
+
+      <label for="location"><b>Location:</b></label>
+      <select name="location" id="location" onchange="validatetimeLocation()" onblur="validatetimeLocation()">
+        <option value="choose" disabled="disabled" selected="true">Choose one</option>
+        <option value="Snow">Snow</option>
+        <option value="Austin">Austin</option>
+        <option value="other">other</option>
+      </select>
+      <br>
+      <p id="location_warning" class="warning"></p>
+
+      <label for="room"><b>Room#:</b></label>
+      <input type="room" placeholder="Room#" name="room" id="room" onchange="validateRoom();" onblur="validateRoom()">
+      <br> <br>
+      <p id="room_warning" class="warning"></p>
+
+      <label for="time_slot"><b>Time Slot:</b></label>
+      <select name="time_slot" id="time_slot" onclick="validatetime_slot()" onblur="validatetime_slot()">
+        <option value="choose" disabled="disabled" selected="true">Choose one</option>
+        <option value="08:30"> 08:30 </option>
+        <option value="09:15"> 09:15 </option>
+        <option value="10:00"> 10:00 </option>
+        <option value="10:45"> 10:45 </option>
+        <option value="11:30"> 11:30 </option>
+        <option value="12:15"> 12:15 </option>
+        <option value="13:00"> 13:00 </option>
+        <option value="13:45"> 13:45 </option>
+        <option value="14:30"> 14:30 </option>
+        <option value="15:15"> 15:15 </option>
+        <option value="16:00"> 16:00 </option>
+        <option value="16:45"> 16:45 </option>
+        <option value="17:30"> 17:30 </option>
+      </select>
+      <br>
+      <p id="time_warning" class="warning"></p>
+
+
+
+
+      <button type="button" class="registerbtn" id="register" onclick="registerStudent()">Register student(s)</button>
+
+      <button type="reset" class="registerbtn" id="clear" onclick="clearing()">clear</button>
+    </div>
+
+    <table id="the_table">
+      <tr>
+        <th>Performance</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Student ID</th>
+        <th>First Name 2</th>
+        <th>Last Name 2</th>
+        <th>Student ID 2</th>
+        <th>Skill</th>
+        <th>Instrument</th>
+        <th>Location</th>
+        <th>Room</th>
+        <th>Time Slot</th>
+      </tr>
+    </table>
+  </form>
+
+
+</body>
+
+</html>

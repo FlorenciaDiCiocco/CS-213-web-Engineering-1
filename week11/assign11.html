@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Florencia Di Ciocco's selling point</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="java.js"></script>
+
+</head>
+
+<body>
+  <nav>
+    <a href="../index.html">Index</a>
+  </nav>
+
+  <!-- FORM -->
+  <form id="myForm" action="assign11.php" method="GET"  onsubmit="return Submiting()">
+    <div class="container">
+      <h1>Buy a bag</h1>
+      <p>Please fill in this form.</p>
+      <hr>
+
+      <label for="FN"><b>First Name</b></label>
+      <input type="text" placeholder="First Name" name="FN" id="FN" onchange="validateName();" onblur="validateName()">
+      <p id="FN_warning" class="warning"></p>
+
+      <label for="LN"><b>Last Name</b></label>
+      <input type="text" placeholder="Last Name" name="LN" id="LN"  onchange="validateLastName();" onblur="validateLastName()">
+      <p id="LN_warning" class="warning"></p>
+
+      <label for="Adress"><b>Adress</b></label>
+      <textarea placeholder="Street address, city, state, and zip" name="Adress" id="Adress" rows="4" cols="50"  onchange="validateAdress();" onblur="validateAdress()"></textarea>
+      <p id="Adress_warning" class="warning"></p>
+
+      <label for="Phone"><b>Phone</b></label>
+      <input type="text" placeholder="Phone" name="Phone" id="Phone" onchange="validatePhone()" onblur="validatePhone()">
+      <p id="phone_warning" class="warning"></p>
+
+      <div class="images">
+        <div class="one">
+          <img src="images/1.jpg" alt="tree colors bag">
+          <input type="checkbox" id="item_0" name="checkboxs[]" value="Three stripes bag" onchange="total()" onblur="total()">
+          <label for="item_0">First product, price 1$</label><br>
+        </div>
+        <div class="two">
+          <img src="images/2.jpg" alt="tree colors bag">
+          <input type="checkbox" id="item_1" name="checkboxs[]" value="Purple bag"  onchange="total()" onblur="total()">
+          <label for="item_1">Second product, price 2$</label><br>
+        </div>
+        <div class="three">
+          <img src="images/3.jpg" alt="tree colors bag">
+          <input type="checkbox" id="item_2" name="checkboxs[]" value="Yellow bag"  onchange="total()" onblur="total()">
+          <label for="item_2">Third product, price 3$</label><br>
+        </div>
+        <div class="four">
+          <img src="images/4.jpg" alt="tree colors bag">
+          <input type="checkbox" id="item_3" name="checkboxs[]" value="Three colors bag" onchange="total()" onblur="total()">
+          <label for="item_3">Third product, price 4$</label>
+        </div>
+      </div>
+
+      <label for="Total"><b>Total</b></label>
+      <input type="text" name="Total" id="Total">
+      <p id="total_warning" class="warning"></p>
+
+      <p><b>Credit Card Type</b></p>
+      <input type="radio" id="Visa" name="card" value="Visa" onchange="validateType();" onblur="validateType()">
+      <label for="Visa">Visa</label><br>
+      <input type="radio" id="Mastercard" name="card" value="Mastercard" onchange="validateType();" onblur="validateType()">
+      <label for="Mastercard">Mastercard</label><br>
+      <input type="radio" id="AE" name="card" value="American Express" onchange="validateType();" onblur="validateType()">
+      <label for="AE">American express</label><br><br>
+      <p id="type_warning" class="warning"></p>
+
+      <label for="credit_card"><b>Credit Card Number</b></label>
+      <input type="text" placeholder="Credit Card Number, format: 1111 1111 1111 1111" name="credit_card" id="credit_card" onchange="validatecredit_card()"
+        onblur="validatecredit_card()">
+      <p id="credit_card_warning" class="warning"></p>
+
+      <label for="exp_date"><b>Credit Card Expiration Date</b></label>
+      <input type="text" placeholder="Credit Card Expiration Date" name="exp_date" id="exp_date" onchange="validateDate()"
+        onblur="validateDate()">
+      <p id="exp_date_warning" class="warning"></p>
+
+      <button type="submit" class="registerbtn"  id="Submit">Submit</button>
+
+      <button type="reset" class="registerbtn" id="clear" >Reset</button>
+    </div>
+
+
+  </form>
+
+
+</body>
+
+</html>
